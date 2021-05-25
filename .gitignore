@@ -1,0 +1,5 @@
+
+node_modules/
+src/img/
+package-lock.json
+.idea/
