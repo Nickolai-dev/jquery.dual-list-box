@@ -1,17 +1,6 @@
 
 
-;(function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof exports === 'object') {
-        // Node/CommonJS
-        factory(require('jquery'));
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function ($) {
+;(function () {
   let dualListBox = (function() {
     let defaults = {
       leftSelect: undefined,
@@ -193,8 +182,8 @@
       }
     }
   }());
-  window.$.fn.extend({
+  $.fn.extend({
     dualListBox: dualListBox.init,
     addListOptions: dualListBox.addOptions
   });
-}));
+}());
